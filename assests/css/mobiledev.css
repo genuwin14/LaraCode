@@ -1,0 +1,46 @@
+
+/* Add padding-top to the section to account for fixed navbar */
+section {
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+}
+
+.container-title {
+    margin-top: 60px;
+}
+
+.disabled-link {
+    pointer-events: none;
+    color: gray !important;
+}
+
+/* Gradient background for cards */
+.card {
+    /* background: linear-gradient(135deg, #2c5364, #203a43); */
+    background-color: #0F2027;
+    color: white; /* To ensure text is visible on the dark background */
+    border: solid 2px #fff; /* Optional: Add a border to the card */
+    box-shadow: 0 4px 20px rgba(44, 83, 100, 0.8), 0 0 30px rgba(44, 83, 100, 0.6);
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Scale hover effect */
+.card:hover {
+    transform: scale(1.02); /* Slightly enlarge the card */
+}
+
+.card i {
+    color: #388baf;
+}
+
+.card-title {
+    color: #fff; /* Ensure the title stands out */
+}
+
+.card-text {
+    margin-top: 8px;
+    color: #ccc; /* A lighter color for card text */
+}
+
+.card li {
+    color: #ccc;
+}

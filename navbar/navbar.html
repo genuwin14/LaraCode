@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <!-- Navbar brand with logo and text -->
+        <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+            <img src="img/code.png" alt="Logo" height="40"> <!-- Logo image -->
+            <span class="ms-2">LaraCode</span> <!-- Text next to the logo -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#expertise">Expertise</a>
+                </li>
+                <!-- Services dropdown replacement -->
+                <li class="nav-item d-lg-none">
+                    <button class="nav-link btn btn-link text-start w-100 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#servicesCollapse" aria-expanded="false" aria-controls="servicesCollapse">
+                        Services
+                    </button>
+                    <div class="collapse ps-3 mt-2" id="servicesCollapse">
+                        <a class="dropdown-item text-white p-2" href="{{ route('webdev') }}" id="webdevLink">Web Development</a>
+                        <a class="dropdown-item text-white p-2" href="{{ route('mobiledev') }}" id="mobiledevLink">Mobile Development</a>
+                        <a class="dropdown-item text-white p-2" href="{{ route('uiuxdev') }}" id="uiuxdevLink">UI/UX</a>
+                    </div>
+                </li>
+
+                <!-- Keep this only for desktop -->
+                <li class="nav-item dropdown d-none d-lg-block">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="{{ route('webdev') }}" id="webdevLink">Web Development</a>
+                        <li><a class="dropdown-item" href="#mobiledev">Mobile Development</a></li>
+                        <li><a class="dropdown-item" href="#uiux">UI/UX</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

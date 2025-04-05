@@ -1,0 +1,90 @@
+.footer {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer h5 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #00d1b2;
+    transform: scale(1.2);
+}
+
+.footer p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content,
+.footer-contact,
+.donation-img {
+    flex: 1 1 30%; /* Adjusted to take up equal space */
+    text-align: center;
+}
+
+.footer-contact {
+    color: #ccc;
+}
+
+.footer-email {
+    color: #00d1b2;
+    text-decoration: none;
+}
+
+.footer-email:hover {
+    text-decoration: underline;
+}
+
+.donation-img img {
+    width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    margin-bottom: 8px;
+}
+
+.donation-text {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.2;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.footer-bottom {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

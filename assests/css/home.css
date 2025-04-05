@@ -1,0 +1,179 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0 0;
+    max-width: 1200px; /* Max width to limit container size */
+    gap: 50px; /* Space between text and image */
+}
+
+.text-content {
+    flex: 1; /* Take up available space */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    animation: slideInFromLeft 1s ease-out; /* Apply animation */
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #4b79a1; /* Hover color */
+}
+
+/* Add keyframes for the slide-in animation */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Add keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+h1 {
+    font-size: 3.5rem; /* Larger heading for emphasis */
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    animation: slideInFromLeft 1s ease-out; /* Apply the animation */
+}
+
+/* Hide the .lead initially */
+.lead {
+    overflow: hidden; /* Ensures the text is clipped during animation */
+    white-space: nowrap; /* Prevents text wrapping */
+    border-right: 2px solid #ffffff; /* Simulates a typing cursor */
+    width: 0; /* Start with no width */
+    animation: typing 5s steps(30, end), blink 0.5s step-end infinite;
+    animation-delay: 1s; /* Delay to start after h1 animation */
+    animation-fill-mode: forwards; /* Retain the final state after animation */
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.explore-btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #283e51;
+    border: 2px solid #283e51;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added transition for box-shadow */
+    margin-top: 10px; /* Space between the button and paragraph */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Space between the icon and text */
+    animation: slideInFromLeft 1s ease-out; /* Apply the animation */
+}
+
+.explore-btn i {
+    font-size: 1.5rem; /* Increase the icon size */
+}
+
+.explore-btn:hover {
+    background-color: #4b79a1;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.5), 0 0 25px 4px linear-gradient(45deg, #0F2027, #203A43, #2C5364); /* Glowing border shadow effect */
+}
+
+.image-content {
+    flex: 0 0 350px; /* Fixed width for the image */
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    border: 5px solid #ffffff; /* White border around the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for image */
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 80px 0;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .lead {
+        font-size: 1rem;
+        white-space: normal;
+        border-right: none;
+        width: auto;
+        overflow: visible;
+        animation: slideInFromLeft 1s ease-out; /* Apply slide-in instead of typing */
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .explore-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+
+    .image-content {
+        margin-top: 15px;
+        flex: none;
+        max-width: 250px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+

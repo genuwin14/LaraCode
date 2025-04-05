@@ -1,0 +1,135 @@
+/* Project Section Styling */
+.project-container {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px; /* Add horizontal padding for small screens */
+}
+
+.project-container h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.project-container p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* Project Gallery */
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Project Item Styling */
+.project-item {
+    background-color: #0F2027;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Add slide-in animation */
+.project-item.show {
+    animation: slideUp 0.8s forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Project Title and Description */
+.project-item h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    color: #fff;
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* Project Icons Styling */
+.project-icons {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    gap: 15px;
+    color: #fff;
+}
+
+.project-icons i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-icons i:hover {
+    color: #f7df1e;
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 768px) {
+    .project-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 90%; /* Make project cards take most of the screen width */
+    }
+
+    .project-container h1 {
+        font-size: 2rem;
+    }
+
+    .project-container p {
+        font-size: 1rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-item p {
+        font-size: 13px;
+    }
+
+    .project-icons {
+        position: static; /* Move icons to normal flow */
+        justify-content: center;
+        margin-top: 15px;
+    }
+}

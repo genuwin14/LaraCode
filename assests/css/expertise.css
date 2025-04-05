@@ -1,0 +1,119 @@
+/* Expertise Section */
+.expertise-container {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.expertise-container h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.expertise-container > p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Expertise Card */
+.expertise-card {
+    background-color: #0F2027;
+    color: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.expertise-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Header with Icon + h3 inline */
+.expertise-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.expertise-header i {
+    font-size: 2rem;
+    color: #388baf;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.expertise-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #fff;
+}
+
+/* Description Text */
+.expertise-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+    text-align: justify;
+}
+
+/* Add animation keyframes */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for animation */
+.expertise-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Class to trigger animation */
+.expertise-card.visible {
+    animation: slideUp 0.6s forwards;
+}
+
+/* Responsive for Tablets and Mobiles */
+@media (max-width: 992px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .expertise-header i {
+        font-size: 1.8rem;
+    }
+
+    .expertise-header h3 {
+        font-size: 1.1rem;
+    }
+}

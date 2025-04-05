@@ -1,0 +1,131 @@
+.navbar {
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+/* Nav links spacing */
+.navbar-nav {
+    gap: 15px;
+}
+
+/* Link styles */
+.navbar-nav .nav-link {
+    position: relative;
+    color: #ffffff;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Underline on hover */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 24px;
+}
+
+.navbar-toggler-icon {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* Ensure dropdown items match navbar styling */
+.dropdown-menu-dark {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+    border-radius: 8px;
+}
+
+/* Add smooth transition on dropdown items */
+.dropdown-menu-dark .dropdown-item {
+    color: #fff;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+    background-color: #343a40;
+    padding-left: 20px;
+}
+
+/* Show dropdown on hover for desktop */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .navbar .dropdown-toggle::after {
+        display: none; /* Hide default Bootstrap arrow */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 10px 15px;
+        background-color: #0F2027;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .navbar-collapse {
+        background-color: transparent;
+        border-radius: 0 0 10px 10px;
+        padding: 10px;
+        outline: none;
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 16px;
+        padding: 5px;
+    }
+    
+    .navbar-toggler-icon {
+        background-color: transparent;
+        color: #fff;
+    }
+}
+
+/* Remove hover effect for mobile dropdown links */
+@media (max-width: 991px) {
+    .navbar-nav .collapse a.nav-link {
+        padding-left: 20px;
+        transition: padding-left 0.3s ease;
+    }
+
+    .navbar-nav .collapse a.nav-link:hover {
+        padding-left: 30px;
+        background-color: transparent;
+    }
+
+    /* Prevent default dropdown on hover for mobile */
+    .navbar .dropdown:hover .dropdown-menu {
+        display: none !important;
+    }
+}

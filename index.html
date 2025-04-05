@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bas Portfolio - LaraCode</title>
+
+    <!-- Favicon (Icon for the tab) -->
+    <link rel="icon" href="assests/img/code.png" type="image/x-icon"> <!-- Or use .png if it's a PNG image -->
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="assests/css/index.css">
+    <link rel="stylesheet" href="assests/css/home.css">
+    <link rel="stylesheet" href="assests/css/about.css">
+    <link rel="stylesheet" href="assests/css/project.css">
+    <link rel="stylesheet" href="assests/css/expertise.css">
+    <link rel="stylesheet" href="assests/css/footer.css">
+    <link rel="stylesheet" href="assests/css/navbar/navbar.css">a
+</head>
+<body>
+
+    <!-- Include Navbar -->
+    <!-- @include('navbar.navbar') -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- Navbar brand with logo and text -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="assests/img/code.png" alt="Logo" height="40"> <!-- Logo image -->
+                <span class="ms-2">LaraCode</span> <!-- Text next to the logo -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#expertise">Expertise</a>
+                    </li>
+                    <!-- Services dropdown replacement -->
+                    <li class="nav-item d-lg-none">
+                        <button class="nav-link btn btn-link text-start w-100 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#servicesCollapse" aria-expanded="false" aria-controls="servicesCollapse">
+                            Services
+                        </button>
+                        <div class="collapse ps-3 mt-2" id="servicesCollapse">
+                            <a class="dropdown-item text-white p-2" href="/webdev/" id="webdevLink">Web Development</a>
+                            <a class="dropdown-item text-white p-2" href="/mobiledev/" id="mobiledevLink">Mobile Development</a>
+                            <a class="dropdown-item text-white p-2" href="/uiuxdev/" id="uiuxdevLink">UI/UX</a>
+                        </div>
+                    </li>
+    
+                    <!-- Keep this only for desktop -->
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+                            <a class="dropdown-item" href="/webdev/" id="webdevLink">Web Development</a>
+                            <li><a class="dropdown-item" href="/mobiledev/">Mobile Development</a></li>
+                            <li><a class="dropdown-item" href="/uiuxdev/">UI/UX</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+
+    <section id="home" class="section">
+        <div class="container home-container">
+            <div class="text-content">
+                <h1>The world will not improve without programmers</h1>
+                <p class="lead">Hi, I'm Kristian Bas, a passionate Full Stack Developer based in the Philippines.</p>
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="https://facebook.com/kristian.bas.10" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/mikami.satoruuuu" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/genuwin14" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:genuinegaming14@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+
+                <button class="explore-btn">
+                    <i class="fas fa-code"></i> Explore More
+                </button>
+            </div>
+            <div class="image-content">
+                <img src="assests/img/profile.JPG" alt="Kristian Bas" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container-about">
+            <h1 class="about-title">About Me</h1>
+            <div class="about-content">
+                <div class="column tech-stack">
+                    <h2>Tech Stack</h2>
+                    <hr style="border: 1px solid #fff;">
+                    <div class="tech-stack-icons">
+                        <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
+                        <div class="tech-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="tech-item"><i class="fab fa-react"></i> React</div>
+                        <div class="tech-item"><i class="fab fa-node"></i> Node.js</div>
+                        <div class="tech-item"><i class="fab fa-java"></i> Java</div>
+                        <div class="tech-item"><i class="fab fa-laravel"></i> Laravel</div>
+                        <!-- <div class="tech-item"><i class="fab fa-microsoft"></i> C#</div> -->
+                        <div class="tech-item"><i class="fab fa-github"></i> GitHub</div>
+                        <div class="tech-item"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+                        <!-- CodeIgniter Logo -->
+                        <div class="tech-item">
+                            <img src="assests/img/codeigniter-svgrepo-com.svg" alt="CodeIgniter" style="width: 24px; height: 24px; margin-right: 10px;">
+                            CodeIgniter
+                        </div>
+                        <div class="tech-item"><i class="fab fa-windows"></i> .NET</div>
+                        <div class="tech-item"><i class="fab fa-php"></i> PHP</div>
+                        <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
+                        <div class="tech-item">
+                            <img src="assests/img/figma.svg" alt="Figma" style="width: 24px; height: 24px; margin-right: 10px;">
+                            Figma
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="column goals">
+                    <h2>Goals</h2>
+                    <hr style="border: 1px solid #fff;">
+                    <ul>
+                        <li><span>"My goal is to develop web applications that not only contribute to open-source platforms but also serve as a means to refine and advance my programming skills. By engaging in open-source projects, I aim to collaborate with a global community of developers, gaining valuable insights and experience while creating impactful solutions. Through continuous learning and hands-on practice, I intend to build my technical expertise, improve my problem-solving abilities, and stay updated with the latest industry trends."</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="project-container mt-3">
+            <h1>My Recent Projects</h1>
+            <!-- New paragraph explaining your skills -->
+            <p style="max-width: 1200px; margin-bottom: 20px; font-size: 1.1rem; color: #ccc; text-align: center;">
+                I developed these projects by applying my knowledge in front-end development, using HTML, CSS, and JavaScript along with modern frameworks. I also implemented responsive design, optimized performance, and maintained clean and organized code throughout the process.
+            </p>
+            <!-- <p>This is collection of my web application development projects.</p> -->
+            <div class="project-gallery">
+                <div class="project-item">
+                    <img src="assests/img/TechScan.png" alt="Project 1">
+                    <h3>TechScan</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dicta nesciunt sunt tenetur fugiat illum vel cum fugit.</p>
+                    <div class="project-icons">
+                        <i class="fab fa-github"></i> <!-- GitHub icon -->
+                        <i class="fas fa-eye"></i> <!-- Eye icon -->
+                        <i class="fas fa-heart"></i> <!-- Heart icon -->
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="assests/img/SparkMe.png" alt="Project 2">
+                    <h3>SparkMe</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dicta nesciunt sunt tenetur fugiat illum vel cum fugit.</p>
+                    <div class="project-icons">
+                        <i class="fab fa-github"></i> <!-- GitHub icon -->
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="assests/img/KeyCab.png" alt="Project 3">
+                    <h3>KeyCab</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dicta nesciunt sunt tenetur fugiat illum vel cum fugit.</p>
+                    <div class="project-icons">
+                        <i class="fab fa-github"></i> <!-- GitHub icon -->
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="section">
+        <div class="expertise-container mt-3">
+            <h1>Expertise</h1>
+            <p>These are the areas where I apply my skills in web development.</p>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <p>Building intuitive user interfaces using HTML, CSS, JavaScript, and modern frameworks.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <p>Creating scalable and secure backend logic using PHP, Python, or Node.js.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database Design</h3>
+                    </div>
+                    <p>Designing and optimizing databases using MySQL, PostgreSQL, or SQLite.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i class="fas fa-plug"></i>
+                        <h3>API Development</h3>
+                    </div>
+                    <p>Creating and integrating RESTful APIs to connect applications and services.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive Design</h3>
+                    </div>
+                    <p>Ensuring that web applications work well on all devices and screen sizes.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Clean Code Practices</h3>
+                    </div>
+                    <p>Writing maintainable, readable, and efficient code for long-term scalability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Footer -->
+    <!-- @include('footer.footer') -->
+
+    <footer class="footer text-white">
+        <div class="footer-container py-2">
+            <!-- Footer Content (left) -->
+            <div class="footer-content text-center">
+                <h5 class="mb-3">Kristian Bas</h5>
+                <div class="footer-icons mb-3">
+                    <a href="https://facebook.com/kristian.bas.10" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/mikami.satoruuuu" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/genuwin14" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:genuinegaming14@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="mb-0">&copy; 2025 Kristian Bas. All rights reserved.</p>
+            </div>
+    
+            <!-- Contact Section (middle) -->
+            <div class="footer-contact">
+                <h5>Contact</h5>
+                <p><a href="mailto:genuinegaming14@gmail.com" class="footer-email">genuinegaming14@gmail.com</a></p>
+                <p><a href="https://facebook.com/kristian.bas.10" class="footer-email" target="_blank">Kristian Bas</a></p>
+                <p>Collaboration: Let's work together on exciting projects! Feel free to reach out.</p>
+            </div>
+    
+            <!-- Donation Image (right) -->
+            <div class="donation-img">
+                <img src="assests/img/QRGcash.jpg" alt="Donate via GCash" />
+                <p class="donation-text">Buy me a coffee ☕</p>
+            </div>
+        </div>
+    
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+    
+        <!-- Bottom Container -->
+        <div class="footer-bottom py-3 text-center">
+            <p class="mb-0">Designed & Developed by Kristian Bas • Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="/js/navbar.js"></script> -->
+    <script src="assests/js/index.js"></script>
+    <script src="assests/js/about.js"></script>
+    <script src="assests/js/project.js"></script>
+    <script src="assests/js/expertise.js"></script>
+</body>
+</html>
