@@ -80,6 +80,25 @@
     text-align: justify;
 }
 
+.project-item p {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-line-clamp: 5;
+    line-clamp: 5; /* Standard property */
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* Optional: fallback */
+    max-height: 7.5em; /* Assuming ~1.5em line-height * 5 lines */
+}
+
+
 /* Project Icons Styling */
 .project-icons {
     position: absolute;
@@ -131,5 +150,89 @@
         position: static; /* Move icons to normal flow */
         justify-content: center;
         margin-top: 15px;
+    }
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    color: #fff;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push the close button to the bottom */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #f7df1e #333;
+}
+
+/* Scrollbar for WebKit browsers (Chrome, Edge, Safari) */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #f7df1e;
+    border-radius: 8px;
+    border: 2px solid #333;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #f7df1e;
+}
+
+#modalImage {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #fff;
+    background-color: #f7df1e;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.close:hover {
+    background-color: #f7df1e;
+    color: #1a1a1a;
+}
+
+/* Responsive modal for mobile */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
     }
 }

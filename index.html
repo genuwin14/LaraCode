@@ -147,7 +147,7 @@
                     <h2>Goals</h2>
                     <hr style="border: 1px solid #fff;">
                     <ul>
-                        <li><span>"My goal is to develop web applications that not only contribute to open-source platforms but also serve as a means to refine and advance my programming skills. By engaging in open-source projects, I aim to collaborate with a global community of developers, gaining valuable insights and experience while creating impactful solutions. Through continuous learning and hands-on practice, I intend to build my technical expertise, improve my problem-solving abilities, and stay updated with the latest industry trends."</span></li>
+                        <li><span>"My goal is to develop web applications that not only contribute to open-source platforms but also serve as a means to refine and advance my programming skills. I aim to collaborate with a global community of developers, gaining valuable insights and experience while creating impactful solutions. Through continuous learning and hands-on practice, I intend to build my technical expertise, improve my problem-solving abilities, and stay updated with the latest industry trends."</span></li>
                     </ul>
                 </div>
             </div>
@@ -166,7 +166,9 @@
                 <div class="project-item">
                     <img src="assests/img/TechScan.png" alt="Project 1">
                     <h3>TechScan</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dicta nesciunt sunt tenetur fugiat illum vel cum fugit.</p>
+                    <p data-fulltext="TechScan is a Capstone Project developed at Camarines Polytechnic Colleges, focused on building a Smart Door Lock System that combines both software and hardware technologies. The system uses NFC card authentication integrated with a unique PIN code, providing a two-layer security feature for access control. Using the ACR122U NFC scanner, users can register their NFC cards into the system, pairing each with a specific PIN. When authenticated, the system communicates with a hardware device to trigger the door mechanism. A centralized dashboard displays real-time access logs, supports user registration, and generates detailed reports. TechScan demonstrates the practical integration of IoT, embedded hardware, and secure web-based systems.">
+                        TechScan is a Capstone Project developed at Camarines Polytechnic Colleges, focused on building a Smart Door Lock System that combines both software and hardware technologies. The system uses NFC card authentication integrated with a unique PIN code, providing a two-layer security feature for access control. Using the ACR122U NFC scanner, users can register their NFC cards into the system, pairing each with a specific PIN. When authenticated, the system communicates with a hardware device to trigger the door mechanism. A centralized dashboard displays real-time access logs, supports user registration, and generates detailed reports. TechScan demonstrates the practical integration of IoT, embedded hardware, and secure web-based systems.
+                    </p>                    
                     <div class="project-icons">
                         <i class="fab fa-github"></i> <!-- GitHub icon -->
                         <i class="fas fa-eye"></i> <!-- Eye icon -->
@@ -176,7 +178,8 @@
                 <div class="project-item">
                     <img src="assests/img/SparkMe.png" alt="Project 2">
                     <h3>SparkMe</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dicta nesciunt sunt tenetur fugiat illum vel cum fugit.</p>
+                    <p data-fulltext="SparkMe is a Capstone Project designed as an open-source educational website that offers a collection of readable files and digital books for users. To enhance engagement, the platform includes a built-in Tic Tac Toe game for users who might need a break or light entertainment. Each uploaded book or file can have an associated quiz module, allowing users to test their understanding and practice what they’ve learned. The system also features automated report generation, providing insights into user activity and quiz performance. SparkMe combines learning, interactivity, and open access—making education both accessible and enjoyable.">
+                        SparkMe is a Capstone Project designed as an open-source educational website that offers a collection of readable files and digital books for users. To enhance engagement, the platform includes a built-in Tic Tac Toe game for users who might need a break or light entertainment. Each uploaded book or file can have an associated quiz module, allowing users to test their understanding and practice what they’ve learned. The system also features automated report generation, providing insights into user activity and quiz performance. SparkMe combines learning, interactivity, and open access—making education both accessible and enjoyable.</p>
                     <div class="project-icons">
                         <i class="fab fa-github"></i> <!-- GitHub icon -->
                         <i class="fas fa-eye"></i>
@@ -186,7 +189,8 @@
                 <div class="project-item">
                     <img src="assests/img/KeyCab.png" alt="Project 3">
                     <h3>KeyCab</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dicta nesciunt sunt tenetur fugiat illum vel cum fugit.</p>
+                    <p data-fulltext="KeyCab is a Capstone Project developed to solve the recurring issue of unreturned laboratory keys. It features a web-based system integrated with a smart key cabinet powered by a Raspberry Pi microcontroller. The cabinet uses ID and PIN code authentication to control access, ensuring that only authorized users can borrow keys. Once a key is accessed, the system automatically records the transaction, logging who borrowed which key and when. With real-time tracking, smart lock integration, and a secure hardware setup, KeyCab enhances key management efficiency and accountability within school laboratories.">
+                        KeyCab is a Capstone Project developed to solve the recurring issue of unreturned laboratory keys. It features a web-based system integrated with a smart key cabinet powered by a Raspberry Pi microcontroller. The cabinet uses ID and PIN code authentication to control access, ensuring that only authorized users can borrow keys. Once a key is accessed, the system automatically records the transaction, logging who borrowed which key and when. With real-time tracking, smart lock integration, and a secure hardware setup, KeyCab enhances key management efficiency and accountability within school laboratories.</p>
                     <div class="project-icons">
                         <i class="fab fa-github"></i> <!-- GitHub icon -->
                         <i class="fas fa-eye"></i>
@@ -196,6 +200,16 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle"></h3>
+            <img id="modalImage" src="" alt="Project Image">
+            <p id="modalDescription"></p>
+            <span class="close">Close</span> <!-- Close button at the bottom -->
+        </div>
+    </div>
 
     <section id="expertise" class="section">
         <div class="expertise-container mt-3">
