@@ -32,7 +32,7 @@
     padding: 20px;
     text-align: center;
     width: 350px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
     position: relative;
     opacity: 0;
@@ -181,7 +181,7 @@
     flex-direction: column;
     justify-content: space-between; /* Push the close button to the bottom */
     scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #f7df1e #333;
+    scrollbar-color: #2f94c0 #333;
 }
 
 /* Scrollbar for WebKit browsers (Chrome, Edge, Safari) */
@@ -195,14 +195,14 @@
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-    background-color: #f7df1e;
+    background-color: #2C5364;
     border-radius: 8px;
     border: 2px solid #333;
 }
 
 .modal-content h3 {
     margin-top: 0;
-    color: #f7df1e;
+    color: #fff;
 }
 
 #modalImage {
@@ -215,7 +215,7 @@
 
 .close {
     color: #fff;
-    background-color: #f7df1e;
+    background-color: #2C5364;
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 18px;
@@ -225,8 +225,8 @@
 }
 
 .close:hover {
-    background-color: #f7df1e;
-    color: #1a1a1a;
+    background-color: #2C5364;
+    color: #fff;
 }
 
 /* Responsive modal for mobile */
